@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Cuprum';
+  src: url('../fonts/cuprum.woff2') format('woff2'),
+       url('../fonts/cuprumbold.woff2') format('woff2'),
+       url('../fonts/cuprumitalic.woff2') format('woff2'), 
+       url('../fonts/cuprumbolditalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'PtSans';
+  src: url('../fonts/ptsans.woff2') format('woff2'),
+       url('../fonts/ptsansbold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Cuprum', 'Calibri', 'Arial', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Дополнительно */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
