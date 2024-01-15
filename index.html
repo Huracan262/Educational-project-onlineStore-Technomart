@@ -2,8 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>ТЕХНОМАРТ</title>
   </head>
 
@@ -14,7 +14,7 @@
         <ul class="header-top-list">
           <li class="header-top-item">
             <label for="search"> 
-              <img src="img/icon-search.svg" width="17" height="17" alt="">
+              <img src="img/icons/icon-search.svg" width="17" height="17" alt="">
             </label>
             <input type="search" name="search" id="search">
           </li>
@@ -57,7 +57,7 @@
         <div class="user-navigation-log visually-hidden">
           <div class="account-container">
           <span>Равшан Джамшутович</span>
-          <img class="logout" src="img/icon-logout.svg" width="21" height="17" alt="Выйти">
+          <img class="logout" src="img/icons/icon-logout.svg" width="21" height="17" alt="Выйти">
           </div>
           <ul class="account-menu">
             <li>
@@ -79,7 +79,7 @@
             <a href="">Компания</a>
           </li>
           <li class="header-bottom-item">
-            <a href="">Каталог</a>
+            <a href="catalog.html">Каталог</a>
           </li>
           <li class="header-bottom-item">
             <a href="">Новости</a>
@@ -103,29 +103,24 @@
         <h2 class="visually-hidden">Промо</h2>
         <ul class="promo-list">
           <li class="promo-item">
-            <!--Доверстать слайдер-->
-            <aside class="slider">
-              <div class="slide active">
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
-                <p>
-                  <img src="" width="620" height="266" alt="">
-                </p>
-                <a class="main-button" href="">Открыть каталог</a>
+            <article class="promo-slider">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+              <p>
+                <img src="img/pictures/Drill.jpg" width="620" height="266" alt="Инструмент в работе">
+              </p>
+              <div class="promo-slider-buttons">
+                <img src="img/icons/icon-left.svg" alt="&lt;">
+                <img src="img/icons/icon-right.svg" alt="&gt;">
               </div>
-              <div class="slide">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-                <p>
-                  <img src="img/pictures/slider-1.jpg" width="620" height="266" alt="">
-                </p>
-                <a class="main-button" href="">Открыть каталог</a>
+              <div>
+                <a class="main-button" href="catalog.html">Открыть каталог</a>
+                <!--Доверстать радио кнопки слайдера-->
+                <div class="promo-slider-radio">
+                  <img src="img/icons/" alt="">
+                </div>
               </div>
-              <div class="buttons-slider">
-                
-              </div>
-              
-            </aside>
+            </article>
           </li>
           <li class="promo-item">
             <h3>Материалы</h3>
@@ -305,7 +300,7 @@
               <a href="">Новости</a>
             </li>
             <li class="footer-navigation-item">
-              <a href="">Каталог</a>
+              <a href="catalog.html">Каталог</a>
             </li>
             <li class="footer-navigation-item">
               <a href="">Доставка</a>
@@ -346,7 +341,7 @@
         </div>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a href=""><img src="img/icons/icon-vk.svg" width="26" height="15" alt="">Вконтакте</a>
+            <a href=""><img src="img/icons/icon-vk.svg" width="26" height="15" alt="Вконтакте"></a>
           </li>
           <li class="footer-social-item">
             <a href=""><img src="img/icons/icon-fb.svg" width="12" height="22" alt="Фейсбук"></a>
@@ -367,5 +362,28 @@
         </div>
       </div>
     </footer>
+
+    <!--Скрытые интерактивные блоки-->
+    <aside class="write-us visually-hidden">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <img src="img/icons/form-2.svg" width="21" height="21" alt="Закрыть">
+      <form action="">
+        <label for="">Ваше имя:</label>
+        <input type="text">
+        <label for="">Ваше e-mail:</label>
+        <input type="email">
+        <label for="">Текст письма</label>
+        <input type="text">
+        <div>
+          <input class="main-button" type="submit" value="Отправить">
+        </div>
+      </form>
+    </aside>
+
+    <aside class="big-map visually-hidden">
+      <h2 class="visually-hidden">Большая карта</h2>
+      <img src="img/icons/form-2.svg" width="21" height="21" alt="Закрыть">
+      <img src="img/maps/map-big.png" width="940" height="446" alt="Большая карта">
+    </aside>
   </body>
 </html> 
