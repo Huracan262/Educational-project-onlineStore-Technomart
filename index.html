@@ -47,17 +47,19 @@
 
         <!--Проверить работоспособность меню аккаунта-->
         <div class="user-navigation-unlog">
-          <div class="button">
+          <a class="button">
             Войти
-          </div>
-          <div class="button">
+          </a>
+          <a class="button">
             Регистрация
-          </div>
+          </a>
         </div>
         <div class="user-navigation-log visually-hidden">
           <div class="account-container">
           <span>Равшан Джамшутович</span>
-          <img class="logout" src="img/icons/icon-logout.svg" width="21" height="17" alt="Выйти">
+          <button class="logout">
+            <img src="img/icons/icon-logout.svg" width="21" height="17" alt="Выйти">
+          </button>
           </div>
           <ul class="account-menu">
             <li>
@@ -110,8 +112,8 @@
                 <img src="img/pictures/Drill.jpg" width="620" height="266" alt="Инструмент в работе">
               </p>
               <div class="promo-slider-buttons">
-                <img src="img/icons/icon-left.svg" alt="&lt;">
-                <img src="img/icons/icon-right.svg" alt="&gt;">
+                <button><img src="img/icons/icon-left.svg" alt="&lt;"></button>
+                <button><img src="img/icons/icon-right.svg" alt="&gt;"></button>
               </div>
               <div>
                 <a class="main-button" href="catalog.html">Открыть каталог</a>
@@ -230,13 +232,13 @@
           <div class="service-slider">
             <ul class="service-slider-list">
               <li class="service-slider-item service-slider-current">
-                Доставка
+                <button>Доставка</button>
               </li>
               <li class="service-slider-item">
-                Гарантия
+                <button>Гарантия</button>
               </li>
               <li class="service-slider-item">
-                Кредит
+                <button>Кредит</button>
               </li>
             </ul>
 
@@ -283,7 +285,7 @@
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <img src="img/maps/map-mini.png" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8">
-          <span class="main-button">Заблудились? Напишите нам!</span>
+          <bottom class="main-button">Заблудились? Напишите нам!</bottom>
         </section>
       </section>
     </main>
@@ -291,6 +293,7 @@
     <footer class="footer-top">
       <div class="container">
         <div class="container-top">
+          <!--Убрать лого из семантики tabindex -1-->
           <a class="footer-logo logo">Техномарт</a>
           <ul class="footer-navigation-list">
             <li class="footer-navigation-item">
@@ -364,9 +367,8 @@
     </footer>
 
     <!--Скрытые интерактивные блоки-->
-    <aside class="write-us visually-hidden">
+    <aside class="write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <img src="img/icons/form-2.svg" width="21" height="21" alt="Закрыть">
       <form action="">
         <label for="">Ваше имя:</label>
         <input type="text">
@@ -378,12 +380,17 @@
           <input class="main-button" type="submit" value="Отправить">
         </div>
       </form>
+      <button>
+        <img src="img/icons/form-2.svg" width="21" height="21" alt="Закрыть">
+      </button>
     </aside>
 
-    <aside class="big-map visually-hidden">
+    <aside class="big-map">
       <h2 class="visually-hidden">Большая карта</h2>
-      <img src="img/icons/form-2.svg" width="21" height="21" alt="Закрыть">
       <img src="img/maps/map-big.png" width="940" height="446" alt="Большая карта">
+      <button>
+        <img src="img/icons/form-2.svg" width="21" height="21" alt="Закрыть">
+      </button>
     </aside>
   </body>
 </html> 
