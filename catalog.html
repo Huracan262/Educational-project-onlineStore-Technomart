@@ -9,15 +9,15 @@
 
   <body>
     <header class="header-top">
-      <!--Убрать tabindex-->
-      <a class="logo header-logo">ТЕХНОМАРТ</a>
       <nav class="header-top-nav">
+        <a class="logo header-logo">ТЕХНОМАРТ</a>
+        
         <ul class="header-top-list">
           <li class="header-top-item">
             <label for="search"> 
-              <img src="img/icons/icon-search.svg" width="17" height="17" alt="">
+              <!--<img src="img/icons/icon-search.svg" width="17" height="17" alt="">-->
+              <input type="search" name="search" id="search" placeholder="Поиск">
             </label>
-            <input type="search" name="search" id="search">
           </li>
           <li class="header-top-item">
             <button>Закладки: 0</button>
@@ -47,18 +47,21 @@
         </ul>
 
         <!--Проверить работоспособность меню аккаунта-->
-        <div class="user-navigation-unlog">
-          <a class="user-nav-button">
+        <div class="user-navigation">
+          <a class="button">
             Войти
           </a>
-          <a class="user-nav-button">
+          <a class="button">
             Регистрация
           </a>
         </div>
-        <div class="user-navigation-log visually-hidden">
+
+        <div class="user-navigation">
           <div class="account-container">
-          <span>Равшан Джамшутович</span>
-          <img class="logout" src="img/icons/icon-logout.svg" width="21" height="17" alt="Выйти">
+            <span>Равшан Джамшутович</span>
+            <button class="logout">
+              <img src="img/icons/icon-logout.svg" width="21" height="17" alt="Выйти">
+            </button>
           </div>
           <ul class="account-menu">
             <li>
@@ -80,7 +83,7 @@
             <a href="">Компания</a>
           </li>
           <li class="header-bottom-item">
-            <a href="">Каталог</a>
+            <a href="catalog.html">Каталог</a>
           </li>
           <li class="header-bottom-item">
             <a href="">Новости</a>
@@ -98,7 +101,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="catalog-main">
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a href="index.html"><img src="img/icons/icon-home.svg" alt="Главная"></a>
@@ -107,15 +110,18 @@
           <a href="">Каталог</a>
         </li>
         <li class="breadcrumbs-item">
-          <a href="">Каталог</a>
+          <a href="">Инструмент</a>
         </li>
         <li class="breadcrumbs-item">
-          <a>Каталог</a>
+          <a>Перфораторы</a>
         </li>
       </ul>
+
       <h1>Перфораторы</h1>
+
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
+
         <section class="filters">
           <h3 class="visually-hidden">Фильтр:</h3>
           <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
@@ -126,6 +132,7 @@
             </fieldset>
             <fieldset class="filter-brands">
               <legend>Производители:</legend>
+
               <ul class="filter-brands-list">
                 <li class="filter-brands-item">
                   <input class="filter-brands-checkbox" id="filter-bosch" type="checkbox" name="Bosch" checked>
@@ -140,7 +147,7 @@
                   <label for="filter-Makita">Makita</label>
                 </li>
                 <li class="filter-brands-item">
-                  <input class="filter-brands-checkbox" id="filter-DeWALT" type="checkbox" name="DeWALT">
+                  <input class="filter-brands-checkbox" id="filter-DeWALT" type="checkbox" name="DeWALT" disabled>
                   <label for="filter-DeWALT">DeWALT</label>
                 </li>
                 <li class="filter-brands-item">
@@ -149,8 +156,10 @@
                 </li>
               </ul>
             </fieldset>
+
             <fieldset class="filter-network">
               <legend>Питание:</legend>
+
               <ul class="filter-network-list">
                 <li class="filter-network-item">
                   <input class="filter-radio-item" type="radio" name="filter-radio" id="battery-power" value="battery-power" checked>
@@ -162,34 +171,38 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="main-button button-filters" type="submit">Показать</button>
+
+            <button class="button-filters" type="submit">Показать</button>
           </form>
         </section>
 
         <section class="products">
           <h3 class="visually-hidden">Список товаров</h3>
+
           <section class="sort">
             <h4>Сортировка:</h4>
+
             <ul class="sort-list">
-              <li class="sort-item active">
-                <button>По цене</button>
+              <li class="sort-item sort-item-current">
+                <a>По цене</a>
               </li>
-              <li>
-                <button>По типу</button>
+              <li class="sort-item">
+                <a>По типу</a>
               </li>
-              <li>
-                <button>По функционалу</button>
+              <li class="sort-item">
+                <a>По функционалу</a>
               </li>
-              <li>
-                <button>
+              <li class="sort-item sort-item-arrows">
+                <a>
                   <img class="sort-buttons active" src="img/icons/icon-up-dir.svg" alt="^">
-                </button>
-              <button>
-                <img class="sort-buttons" src="img/icons/icon-down-dir.svg" alt="v">
-              </button>
+                </a>
+                <a>
+                  <img class="sort-buttons" src="img/icons/icon-down-dir.svg" alt="v">
+                </a>
               </li>
             </ul>
           </section>
+
           <!--Допилить интерактивность-->
           <ul class="products-list">
             <li class="products-item">
@@ -199,14 +212,15 @@
               <p>
                 <img src="img/catalog/Perforator_BOSCH_BFG_3000.jpg" width="218" height="170" alt="Перфоратор">
               </p>
-              <div>
+              <div class="products-item-button">
                 <a class="item-button-buy" href="">Купить</a>
                 <button class="item-button-bookmark">В 
                 закладки</button>
               </div>
               <del>22500 Р.</del>
-              <b>15500 Р.</b>
+              <a class="item-price-buy">15500 Р.</a>
             </li>
+            <!--Привести кнопки к стандарту 1-ой-->
             <li class="products-item">
               <a href="">
                 <h4>Перфоратор Bosch BFG 6000</h4>
@@ -325,8 +339,9 @@
               <b>12500 Р.</b>
             </li>
           </ul>
+
           <ul class="pagination-list">
-            <li class="pagination-item-current">
+            <li class="pagination-item pagination-item-current">
               <button>1</button>
             </li>
             <li class="pagination-item">
@@ -342,9 +357,10 @@
         </section>
       </section>
       
-      <aside>
+      <aside class="about-perf">
         <div class="container">
           <h2>Пара слов о перфораторах</h2>
+
           <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
