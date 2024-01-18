@@ -1,3 +1,4 @@
+<!--Flex-grow Поглащение свобод. пространства-->
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -16,7 +17,7 @@
           <li class="header-top-item">
             <label for="search"> 
               <!--<img src="img/icons/icon-search.svg" width="17" height="17" alt="">-->
-              <input type="search" name="search" id="search" placeholder="Поиск">
+              <input type="search" name="search" id="search" placeholder="Поиск:">
             </label>
           </li>
           <li class="header-top-item">
@@ -34,7 +35,9 @@
 
     <header class="header-bottom">
       <div class="container">
-        <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <p>Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта</p>
 
         <!--Проверить правильность списка-->
         <ul class="header-contacts">
@@ -42,7 +45,7 @@
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </li>
           <li>
-            <address>г. Санкт-Петербург, улю Б. Конюшенная, д. 19/8</address>
+            <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </li>
         </ul>
 
@@ -56,7 +59,7 @@
           </a>
         </div>
 
-        <div class="user-navigation">
+        <div class="user-navigation off">
           <div class="account-container">
             <span>Равшан Джамшутович</span>
             <button class="logout">
@@ -110,17 +113,22 @@
         <ul class="promo-list">
           <li class="promo-item">
             <article class="promo-slider">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <p>
+              <p class="slider-img">
                 <img src="img/pictures/Drill.jpg" width="620" height="266" alt="Инструмент в работе">
               </p>
+
+              <h3>Дрели</h3>
+
+              <p class="slider-description">Соседям на радость!</p>
+
               <div class="promo-slider-buttons">
                 <button><img src="img/icons/icon-left.svg" alt="&lt;"></button>
                 <button><img src="img/icons/icon-right.svg" alt="&gt;"></button>
               </div>
-              <div>
+
+              <div class="slider-buttons">
                 <a class="main-button" href="catalog.html">Открыть каталог</a>
+
                 <!--Доверстать радио кнопки слайдера-->
                 <div class="promo-slider-radio">
                   <img src="img/icons/" alt="">
@@ -169,7 +177,7 @@
               <p>
                 <img src="img/catalog/Perforator_BOSCH_BFG_9000.jpg" width="218" height="170" alt="Перфоратор">
               </p>
-              <div class="products-item-button">
+              <div class="products-item-button off">
                 <a class="item-button-buy" href="">Купить</a>
                 <button class="item-button-bookmark">В 
                 закладки</button>
@@ -262,17 +270,24 @@
             <!--Блоки слайдера(Информация + лого)-->
             <section class="service-slider-page active">
               <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+              <p>Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!<br>
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!</p>
             </section>
 
-            <section class="service-slider-page">
+            <section class="service-slider-page visually-hidden">
               <h3>Гарантия</h3>
-              <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+              <p>Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгоранием,<br>
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br> сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.</p>
             </section>
 
-            <section class="service-slider-page">
+            <section class="service-slider-page visually-hidden">
               <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+              <p>Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.</p>
               <a class="main-button" href="">Отправить заявку</a>
             </section>
           </div>
@@ -320,8 +335,8 @@
     <footer class="footer-top">
       <div class="container">
         <div class="container-top">
-          <!--Убрать лого из семантики tabindex -1-->
           <a class="footer-logo logo">Техномарт</a>
+
           <ul class="footer-navigation-list">
             <li class="footer-navigation-item">
               <a href="">Компания</a>
@@ -400,20 +415,28 @@
     </footer>
 
     <!--Скрытые интерактивные блоки-->
-    <aside class="write-us">
+    <aside class="write-us off">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-        <label for="write-us-name">Ваше имя:</label>
-        <input id="write-us-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+        <div class="write-us-container">
+          <div class="write-us-name-block">
+            <label for="write-us-name">Ваше имя:</label><br>
+            <input class="write-us-name" id="write-us-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+          </div>
 
-        <label for="write-us-email">Ваше e-mail:</label>
-        <input id="write-us-email" type="email" name="email" placeholder="Для отправки ответа">
+          <div class="write-us-email-block">
+            <label for="write-us-email">Ваше e-mail:</label><br>
+            <input class="write-us-email" id="write-us-email" type="email" name="email" placeholder="Для отправки ответа">
+          </div>
+        </div>
 
-        <label for="">Текст письма:</label>
-        <input id="write-us-text" type="text" name="text" placeholder="В свободной форме">
+        <div class="write-us-text-block">
+          <label for="write-us-text">Текст письма:</label><br>
+          <textarea class="write-us-text" id="write-us-text" name="text" placeholder="В свободной форме"></textarea>
+        </div>
 
-        <div>
-          <input class="main-button" type="submit" value="Отправить">
+        <div class="write-us-submit">
+          <button class="main-button" type="submit">Отправить</button>
         </div>
       </form>
       <button class="close">
