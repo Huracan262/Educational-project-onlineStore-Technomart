@@ -1361,6 +1361,8 @@ ol {
 }
 
 .filters h3 {
+  padding: 10px 20px;
+  margin-bottom: 17px;
   font-family: 'PT Sans', sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1370,8 +1372,54 @@ ol {
 }
 
 .filters-form fieldset {
+  padding: 0;
   border: none;
   border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-price-range {
+  width: 220px;
+  height: 80px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f3ec;
+  border-radius: 3px;
+}
+
+.filter-price-numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.filter-price-numbers span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 38px;
+
+  font-family: 'PT Sans', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: black;
+
+  background-color: #f7f3ec;
+  border-radius: 3px;
+}
+
+.filter-price-numbers span:last-child::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 10px;
+  height: 1px;
+  margin-right: -6px;
+  background-color: black;
 }
 
 .filters-form legend {
@@ -1528,9 +1576,41 @@ ol {
   opacity: 1;
 }
 
-.sort-item-arrows a,
+
+.sort-item-arrows a {
+  font-size: 0;
+  border: none;
+}
+
 .sort-item-arrows a:hover {
   border: none;
+}
+
+.sort-item-arrows a::before {
+  content: '';
+  display: inline-block;
+
+  border: 10px solid black;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+a.arrow-up::before {
+  border-top-width: 0;
+}
+
+a.arrow-down::before {
+  border-bottom-width: 0;
+}
+
+a.arrow-current::before,
+a.arrow-current:hover::before,
+a.arrow-current {
+  border-bottom-color: #ee3643;
+  border-top-color: #ee3643;
+  opacity: 1;
 }
 
 .about-perf {
